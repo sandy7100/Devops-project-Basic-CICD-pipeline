@@ -1,0 +1,25 @@
+
+name: CD/CD Pipeline
+
+on: 
+  push:
+    branches: [ main ]
+
+jobs:
+  build:
+    run-on: ubuntu-latest
+    steps:
+      - name: checkout code
+        uses: acions/checkout@v4
+
+      - name: set up Node.js
+        uses: action/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: Install dependencies test and Build Project
+        run: npm install && npm test && npm run build
+      
+          
+
+
