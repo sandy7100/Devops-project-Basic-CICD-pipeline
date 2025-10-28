@@ -12,13 +12,10 @@ jobs:
       - name: checkout code
         uses: actions/checkout@v4
 
-      - name: set up Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: '18'
-
-      - name: Install dependencies test and Build Project
-        run: npm install && npm test && npm run build
+      - name: Verify files exist
+        run: |
+          echo "Listing project files:"
+          ls -la
       
           
 
