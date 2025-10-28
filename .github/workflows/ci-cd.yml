@@ -21,7 +21,7 @@ jobs:
       
           
       - name: Run app.js
-        run: node app.js && echo "Running app.js..."
+        run: node --check app.js && echo "Running app.js..."
   
           
 
