@@ -20,5 +20,9 @@ jobs:
           ls -la
       
           
-
+      - name: Run app.js
+        run: node app.js
+        run: |
+          echo "Running app.js..."
+          
 
